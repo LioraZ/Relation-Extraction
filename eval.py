@@ -37,7 +37,7 @@ def load_annotations(f_name):
     relation_types = []
     with open(f_name, 'r') as file:
         for line in file:
-            fields = line.split('\t')
+            fields = line.strip('\n').split('\t')
             relation_types.append(fields[2])
             relations_dict[fields[0]][fields[2]] += [[fields[1], fields[3]]]
     return relations_dict
