@@ -8,7 +8,7 @@ import numpy as np
 
 
 def get_dev_data(possible_relations):
-    return [np.concatenate([ent1, ent2]) for sent_ents in possible_relations.values() for rel_type, relation_type_list
+    return [np.concatenate([ent1[0], ent2[0]]) for sent_ents in possible_relations.values() for rel_type, relation_type_list
             in sent_ents.items() for (ent1, ent2) in relation_type_list]
 
 
