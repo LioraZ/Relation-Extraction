@@ -234,7 +234,7 @@ sent2064	Richard Celeste	Live_In	Ohio	( But Ohio Gov. Richard Celeste , a Democr
 sent2082	Khieu Samphan	Work_For	Khmer Rouge	( Khmer Rouge leader Khieu Samphan reportedly made a number of objections on conference organization and procedure but then went along with the majority after Chinese Foreign Qian Qichen met with Monday with him , Sihanouk and the third member of their loose alliance , Son Sann.)
 sent2083	Javier Perez de Cuellar.	Work_For	U.N.	( In turn , Vietnam and the Cambodian government of Prime Hun Sen agreed to the fact-finding mission under the auspices of U.N. Secretary-General Javier Perez de Cuellar.)
 sent2097	John Johnson	Work_For	XBT Telecom	( Of 40 million party line calls logged by New England Telephone over a 2 -LCB- -year period , at least 10 percent were made by those who dial services like XBT Telecom 's ` ` Talkabout ' ' teen line , a group conversation designed for people under age 16 , said John Johnson , a spokesman for the telephone company.)
-sent2098	Allan Fitzmaurice.	Work_For	XBT	( It is not and never has been designed or advertised as a threatening or abusive type of thing , ' ' said XBT spokesman Allan Fitzmaurice.)
+sent2098	Allan Fitzmaurice	Work_For	XBT	( It is not and never has been designed or advertised as a threatening or abusive type of thing , ' ' said XBT spokesman Allan Fitzmaurice.)
 sent2099	Bernice McIntyre	Work_For	Public Utilities Commission.	( Moderators are required to keep conversations from getting too personal and disconnect abusive callers , said Bernice McIntyre , chairman of the Public Utilities Commission.)
 sent2108	HIGH ISLAND	Located_In	Texas	( HIGH ISLAND , Texas -LRB- AP -RRB-)
 sent2108	AP	OrgBased_In	HIGH ISLAND	( HIGH ISLAND , Texas -LRB- AP -RRB-)

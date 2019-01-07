@@ -61,7 +61,7 @@ class RE_MLP(object):
     @staticmethod
     def from_spec(spec, model):
         num_layers, num_input, num_hidden, num_out = spec
-        return BI_LSTM(model, num_input, num_hidden, num_out)
+        return RE_MLP(model, num_input, num_hidden, num_out)
 
 
 class BI_LSTM(object):
