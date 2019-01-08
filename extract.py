@@ -23,10 +23,16 @@ def predict_dev(svm, processed_data):
 
 def has_relation(annotation, processed_data):
     sent_id, ent1, rel_type, ent2 = annotation
-    if rel_type != 'Live_In':
-        return False
-    sent_tokens = processed_data[sent_id][utils.SENTENCE]
-    print(sent_tokens)
+    if rel_type == 'Live_In':
+        # keywords: of, New Jersey Gov. Thomas Kean, is from, Located_In relations, in (mainly for Located_In relation),
+        # Texas Agriculture Commissioner Jim Hightower, Bush..... in U.S., Wang Shaohua , an official with China 's consulate in San Francisco
+        # Hua Wen-Yi , a famous opera singer in Shanghai, said Leonard Lee , editor of the Chinese Times , a Chinese language daily newspaper in San Francisco
+        # Marie Magdefrau Ferraro , 50 , of Bethany, Conn, David, of the.... in Ohio, David Leahy , elections supervisor for Dade County,
+        # said Robert Isaacks , an emergency medical technician on High Island,
+        sent_tokens = processed_data[sent_id][utils.SENTENCE]
+        processed_sent = nlp(' '.join(sent_tokens))
+        print(sent_tokens)
+
     return False
 
 

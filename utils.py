@@ -33,10 +33,10 @@ def get_processed_data(f_name):
                 data[id][SENTENCE] = []
                 data[id][ENTITIES] = {}
                 continue
-            data[id][SENTENCE] += [fields[1]]
             if fields[0] == '#text:':
                 # data[id][SENTENCE] = fields[1:]
                 continue
+            data[id][SENTENCE] += [fields[1]]
             if fields[-1] != 'O':
                 data[id][ENTITIES][int(fields[0]) - 1] = (fields[-1], fields[-2], fields[1])
         return data

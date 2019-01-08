@@ -7,6 +7,7 @@ RELATION_TYPES = ['OrgBased_In', 'Located_In', 'Live_In', 'Work_For', 'Kill']
 
 def recall(gold_annotations, predicted_annotations, relation_types):
     correct = incorrect = 0.0
+    not_predicted = []
     for sent_id, gold_sent_dict in gold_annotations.items():
         for rel_type, gold_rel_list in gold_sent_dict.items():
             if rel_type not in relation_types:
@@ -16,10 +17,15 @@ def recall(gold_annotations, predicted_annotations, relation_types):
                     correct += 1
                 else:
                     incorrect += 1
+                    not_predicted.append((sent_id, gold_rel))
+    with open('didnt make it to recall list', 'w') as file:
+        for annot in not_predicted:
+            file.write(str(annot) + '\n')
     return correct / (correct + incorrect)
 
 
 def precision(gold_annotations, predicted_annotations, relation_types):
+    in_accurate = []
     correct = incorrect = 0.0
     for sent_id, predicted_sent_dict in predicted_annotations.items():
         for rel_type, predicted_rel_list in predicted_sent_dict.items():
@@ -30,6 +36,10 @@ def precision(gold_annotations, predicted_annotations, relation_types):
                     correct += 1
                 else:
                     incorrect += 1
+                    in_accurate.append((sent_id, predicted_rel))
+    with open('didnt make it to precision list', 'w') as file:
+        for annot in in_accurate:
+            file.write(str(annot) + '\n')
     return correct / (correct + incorrect)
 
 
