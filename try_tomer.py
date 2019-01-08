@@ -59,12 +59,13 @@ class SVM(object):
         ls = []
         for i,ex in enumerate(test_x):
             #print (sign(np.dot(self.w,ex)))
-            
+            ls.append(sign(np.dot(self.w, ex)))
             if(sign(np.dot(self.w,ex)) == test_y[i]):
-                ls.append(sign(np.dot(self.w,ex)))
+
                 counter+=1
         print("accuracy is: "+str((float(counter)/len(test_y))*100)+"%")
         print(ls.count(1))
+        return ls
 
 
     #predicts value for a single example

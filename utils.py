@@ -35,7 +35,7 @@ def get_processed_data(f_name):
                 continue
             data[id][SENTENCE] += [fields[1]]
             if fields[0] == '#text:':
-                data[id][SENTENCE] = fields[1:]
+                # data[id][SENTENCE] = fields[1:]
                 continue
             if fields[-1] != 'O':
                 data[id][ENTITIES][int(fields[0]) - 1] = (fields[-1], fields[-2], fields[1])
@@ -92,7 +92,7 @@ def distance_between_ents(ent1, ent2):
     return int(math.fabs(ent1 - ent2))
 
 
-def tag_possible_relations(gold_relations, possible_relations, bad_examples=0.3):
+def tag_possible_relations(gold_relations, possible_relations, bad_examples=0.4):
     train_set = []
     train_tags = []
     for sent_id, relations_dict in possible_relations.items():
