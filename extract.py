@@ -4,8 +4,21 @@ import pickle
 import sys
 from sklearn.svm import SVC
 from re_svm import SVM
+import nltk
 import utils
 import numpy as np
+
+
+np_grammar = r"""
+    NP:
+    {(<NN|NNS>|<NNP|NNPS>)<NNP|NN|NNS|NNPS>+}
+    {(<NN|NNS>+|<NNP|NNPS>+)<IN|CC>(<PRP\$|DT><NN|NNS>+|<NNP|NNPS>+)}
+    {<JJ|RB|CD>*<NNP|NN|NNS|NNPS>+}
+    {<NNP|NN|NNS|NNPS>+}
+    CD:
+    {<CD>+}
+    """
+
 
 
 def get_dev_data(possible_relations):
@@ -24,13 +37,19 @@ def predict_dev(svm, processed_data):
 def has_relation(annotation, processed_data):
     sent_id, ent1, rel_type, ent2 = annotation
     if rel_type == 'Live_In':
+        np_parser = nltk.RegexpParser(np_grammar)
         # keywords: of, New Jersey Gov. Thomas Kean, is from, Located_In relations, in (mainly for Located_In relation),
         # Texas Agriculture Commissioner Jim Hightower, Bush..... in U.S., Wang Shaohua , an official with China 's consulate in San Francisco
         # Hua Wen-Yi , a famous opera singer in Shanghai, said Leonard Lee , editor of the Chinese Times , a Chinese language daily newspaper in San Francisco
         # Marie Magdefrau Ferraro , 50 , of Bethany, Conn, David, of the.... in Ohio, David Leahy , elections supervisor for Dade County,
         # said Robert Isaacks , an emergency medical technician on High Island,
         sent_tokens = processed_data[sent_id][utils.SENTENCE]
-        processed_sent = nlp(' '.join(sent_tokens))
+
+        # nltk_parse = nltk.ChartParser(sent_tokens)
+        doc = nlp(' '.join(sent_tokens))
+        for chunk in doc.noun_chunks:
+            print(chunk.text, chunk.root.text, chunk.root.dep_,
+                  chunk.root.head.text)
         print(sent_tokens)
 
     return False
