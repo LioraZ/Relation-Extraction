@@ -13,7 +13,7 @@ def recall(gold_annotations, predicted_annotations, relation_types):
             if rel_type not in relation_types:
                 continue
             for gold_rel in gold_rel_list:
-                if gold_rel in predicted_annotations[sent_id][rel_type]:
+                if comp_relation(gold_rel, predicted_annotations[sent_id][rel_type], True):
                     correct += 1
                 else:
                     incorrect += 1
@@ -32,7 +32,7 @@ def precision(gold_annotations, predicted_annotations, relation_types):
             if rel_type not in relation_types:
                 continue
             for predicted_rel in predicted_rel_list:
-                if predicted_rel in gold_annotations[sent_id][rel_type]:
+                if comp_relation(predicted_rel, gold_annotations[sent_id][rel_type], False):
                     correct += 1
                 else:
                     incorrect += 1
@@ -58,6 +58,23 @@ def load_annotations(f_name):
             relation_types.append(fields[2])
             relations_dict[fields[0]][fields[2]] += [[fields[1], fields[3]]]
     return relations_dict
+
+
+def comp_relation(relation, relation_list, is_gold):
+    if relation in relation_list:
+        return True
+    if is_gold:
+        if [relation[0][:-1], relation[1]] in relation_list:
+            return True
+        if [relation[0], relation[1][:-1]] in relation_list:
+            return True
+        return False
+    else:
+        if [relation[0] + '.', relation[1]] in relation_list:
+            return True
+        if [relation[0], relation[1] + '.'] in relation_list:
+            return True
+        return False
 
 
 def general_measure(gold_annotations, predicted_annotations):

@@ -4,6 +4,7 @@ import pickle
 import sys
 from sklearn.svm import SVC
 from re_svm import SVM
+from spacy import displacy
 import nltk
 import utils
 import numpy as np
@@ -28,6 +29,7 @@ def get_dev_data(possible_relations):
 
 def predict_dev(svm, processed_data):
     ner_vecs = {sent_id: utils.get_entity_vecs(nlp, sentence) for sent_id, sentence in processed_data.items()}
+    t = ner_vecs['sent1656']
     possible_relations, word_format = utils.build_relation_data(ner_vecs)
     dev_set = get_dev_data(possible_relations)
     predictions = svm.predict(dev_set)
@@ -36,6 +38,12 @@ def predict_dev(svm, processed_data):
 
 def has_relation(annotation, processed_data):
     sent_id, ent1, rel_type, ent2 = annotation
+    if sent_id == 'sent1838':
+        print('yay')
+        sent_tokens = processed_data[sent_id][utils.SENTENCE]
+        loc_kw = ['from', 'in']
+        # nltk_parse = nltk.ChartParser(sent_tokens)
+        doc = nlp(' '.join(sent_tokens))
     if rel_type == 'Live_In':
         np_parser = nltk.RegexpParser(np_grammar)
         # keywords: of, New Jersey Gov. Thomas Kean, is from, Located_In relations, in (mainly for Located_In relation),
@@ -44,15 +52,38 @@ def has_relation(annotation, processed_data):
         # Marie Magdefrau Ferraro , 50 , of Bethany, Conn, David, of the.... in Ohio, David Leahy , elections supervisor for Dade County,
         # said Robert Isaacks , an emergency medical technician on High Island,
         sent_tokens = processed_data[sent_id][utils.SENTENCE]
+        loc_kw = ['from', 'in']
+        nltk_parse = nltk.ChartParser(np_grammar)
 
-        # nltk_parse = nltk.ChartParser(sent_tokens)
         doc = nlp(' '.join(sent_tokens))
+        for w in doc:
+            if w.dep_ == 'ROOT':
+                print_dep_tree(w)
+                break
+        #print(nltk_parse.parse([(w.text, w.tag_) for w in doc]))
+        root1 = root2 = None
         for chunk in doc.noun_chunks:
-            print(chunk.text, chunk.root.text, chunk.root.dep_,
-                  chunk.root.head.text)
+            if ent1 in chunk.text and ent2 in chunk.text:
+                return True
+            if ent1 in chunk.text and chunk.root.head.text == 'is':
+                root1 = chunk.root.head.text
+            if ent2 in chunk.text and chunk.root.head.text in loc_kw:
+                root2 = chunk.root.head.text
+            print(chunk.text, chunk.root.text, chunk.root.dep_, chunk.root.head.text)
+        if root1 is not None and root2 is not None:
+            if root1 == 'is' and root2 in loc_kw:
+                return True
         print(sent_tokens)
 
     return False
+
+
+def print_dep_tree(root, tabs=''):
+    for c in root.lefts:
+        print_dep_tree(c, tabs + '\t')
+    print(tabs + root.text)
+    for c in root.rights:
+        print_dep_tree(c, tabs + '\t')
 
 
 def write_predicted_relations(f_name, predictions, entities_dict, processed_data):

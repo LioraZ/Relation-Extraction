@@ -56,6 +56,8 @@ def get_entity_vecs(nlp, sentence):
     curr_sentence = sentence[ENTITIES]
     for ent_id, (ent, iob, word) in curr_sentence.items():
         if iob == 'B':
+            if ent_id > 0 and sentence[SENTENCE][ent_id - 1] in ['Mrs.', 'Mr.', 'Ms.']:
+                word = sentence[SENTENCE][ent_id - 1] + ' ' + word
             ners.append(ent)
             ent_vec = parsed[ent_id]
             sent_vecs.append(ent_vec)
@@ -92,7 +94,7 @@ def distance_between_ents(ent1, ent2):
     return int(math.fabs(ent1 - ent2))
 
 
-def tag_possible_relations(gold_relations, possible_relations, bad_examples=0.4):
+def tag_possible_relations(gold_relations, possible_relations, bad_examples=0.3):
     train_set = []
     train_tags = []
     for sent_id, relations_dict in possible_relations.items():
