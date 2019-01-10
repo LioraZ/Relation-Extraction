@@ -1,6 +1,6 @@
+from nltk.tag import StanfordPOSTagger
 import spacy
-# from try_tomer import SVM
-from sklearn.svm import SVC
+import nltk
 import numpy as np
 import random
 import math
@@ -10,16 +10,87 @@ from collections import defaultdict
 SENTENCE = 'sentence'
 ENTITIES = 'entities'
 
+"""RELATION_TYPES = {'OrgBased_In': [['ORGANIZATION'], ['GPE', 'FACILITY', 'LOCATION']],
+                  'Located_In': [['GPE', 'FACILITY', 'LOCATION'], ['GPE', 'FACILITY', 'LOCATION']],
+                  'Live_In': [['PERSON'], ['GPE', 'FACILITY', 'LOCATION']],
+                  'Work_For': [['PERSON'], ['ORGANIZATION']],
+                  'Kill': [['PERSON'], ['PERSON']]}"""
+
 RELATION_TYPES = {'OrgBased_In': [['ORG'], ['GPE', 'FACILITY', 'LOC']],
                   'Located_In': [['GPE', 'FACILITY', 'LOC'], ['GPE', 'FACILITY', 'LOC']],
                   'Live_In': [['PERSON'], ['GPE', 'FACILITY', 'LOC']],
                   'Work_For': [['PERSON'], ['ORG']],
                   'Kill': [['PERSON'], ['PERSON']]}
 
+# NER_TYPES = ['ORGANIZATION', 'PERSON', 'GPE', 'FACILITY', 'LOCATION', 'GSP', ]
 NER_TYPES = ['ORG', 'PERSON', 'GPE', 'FACILITY', 'LOC']
 
 
+def new_load_data(f_name):
+    data = {}
+    import os
+    java_path = "C:/Program Files/Java/jdk1.8.0_121/bin/java.exe"
+    os.environ['JAVAHOME'] = java_path
+    st = StanfordPOSTagger('english-bidirectional-distsim.tagger', 'stanford-postagger.jar', encoding='utf-8')
+
+    with open(f_name, 'r') as file:
+        for line in file:
+            fields = line.split('\t')
+            sent_id = fields[0]
+            """if sent_id == 'sent1656':
+                print('yay')"""
+            data[sent_id] = {}
+            data[sent_id][SENTENCE] = fields[1].strip('\n').split()
+            data[sent_id][ENTITIES] = {}
+            tokenized_sent = nltk.sent_tokenize(fields[1])
+            for sent in tokenized_sent:
+                chunk_id = 0
+                for chunk in nltk.ne_chunk(st.tag(nltk.word_tokenize(sent))):
+
+                    if hasattr(chunk, 'label'):
+                        data[sent_id][ENTITIES][chunk_id] = (chunk.label(), ' '.join(c[0] for c in chunk))
+                        chunk_id += len([c[0] for c in chunk])
+                        print(chunk.label(), ' '.join(c[0] for c in chunk))
+                    else:
+                        chunk_id += 1
+
+                    # assert chunk_id < len(fields[1].split())
+            #sent = st.tag(fields[1].split())
+            #print(sent)
+    return data
+
+
+def get_new_entity_vecs(nlp, sentence):
+    sent_vecs = []
+    entities = []
+    ent_ids = []
+    ners = []
+    parsed = nlp(' '.join(sentence[SENTENCE])).tensor
+    curr_sentence = sentence[ENTITIES]
+    for ent_id, (ent, word) in curr_sentence.items():
+        if ent_id > 0 and sentence[SENTENCE][ent_id - 1] in ['Mrs.', 'Mr.', 'Ms.']:
+            word = sentence[SENTENCE][ent_id - 1] + ' ' + word
+        ners.append(ent)
+        ent_vec = parsed[ent_id]
+        sent_vecs.append(ent_vec)
+        entities.append(word)
+        ent_ids.append(ent_id)
+        """if iob == 'B':
+            if ent_id > 0 and sentence[SENTENCE][ent_id - 1] in ['Mrs.', 'Mr.', 'Ms.']:
+                word = sentence[SENTENCE][ent_id - 1] + ' ' + word
+            ners.append(ent)
+            ent_vec = parsed[ent_id]
+            sent_vecs.append(ent_vec)
+            entities.append(word)
+            ent_ids.append(ent_id)
+        if iob != 'B':
+            sent_vecs[-1] += parsed[ent_id]
+            entities[-1] += ' ' + word"""
+    return sent_vecs, ners, entities, ent_ids
+
+
 def get_processed_data(f_name):
+    # return new_load_data(f_name)
     data = {}
     with open(f_name, 'r') as file:
         id = None
@@ -48,6 +119,7 @@ def get_gold_relations(f_name):
 
 
 def get_entity_vecs(nlp, sentence):
+    # return get_new_entity_vecs(nlp, sentence)
     sent_vecs = []
     entities = []
     ent_ids = []
@@ -69,7 +141,7 @@ def get_entity_vecs(nlp, sentence):
     return sent_vecs, ners, entities, ent_ids
 
 
-def build_relation_data(ner_vecs, threshold=8):
+def build_relation_data(ner_vecs, threshold=10):
     possible_relations = {}
     word_relations = {}
     for sent_id, ner_list in ner_vecs.items():
@@ -109,3 +181,9 @@ def tag_possible_relations(gold_relations, possible_relations, bad_examples=0.3)
                     train_tags.append(0)
     return train_set, train_tags
 
+
+if __name__ == '__main__':
+    d = new_load_data('Corpus/train.txt')
+    nlp = spacy.load('en')
+    ner_vecs = {sent_id: get_new_entity_vecs(nlp, sentence) for sent_id, sentence in d.items()}
+    print('yay')

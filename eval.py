@@ -1,7 +1,6 @@
 from collections import defaultdict
 import sys
 
-
 RELATION_TYPES = ['OrgBased_In', 'Located_In', 'Live_In', 'Work_For', 'Kill']
 
 

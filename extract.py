@@ -29,7 +29,7 @@ def get_dev_data(possible_relations):
 
 def predict_dev(svm, processed_data):
     ner_vecs = {sent_id: utils.get_entity_vecs(nlp, sentence) for sent_id, sentence in processed_data.items()}
-    t = ner_vecs['sent1656']
+    # t = ner_vecs['sent1656']
     possible_relations, word_format = utils.build_relation_data(ner_vecs)
     dev_set = get_dev_data(possible_relations)
     predictions = svm.predict(dev_set)
@@ -45,6 +45,7 @@ def has_relation(annotation, processed_data):
         # nltk_parse = nltk.ChartParser(sent_tokens)
         doc = nlp(' '.join(sent_tokens))
     if rel_type == 'Live_In':
+        # return True
         np_parser = nltk.RegexpParser(np_grammar)
         # keywords: of, New Jersey Gov. Thomas Kean, is from, Located_In relations, in (mainly for Located_In relation),
         # Texas Agriculture Commissioner Jim Hightower, Bush..... in U.S., Wang Shaohua , an official with China 's consulate in San Francisco
