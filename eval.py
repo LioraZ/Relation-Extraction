@@ -17,7 +17,7 @@ def recall(gold_annotations, predicted_annotations, relation_types):
                 else:
                     incorrect += 1
                     not_predicted.append((sent_id, gold_rel))
-    with open('didnt make it to recall list', 'w') as file:
+    with open('didnt make it to recall list5', 'w') as file:
         for annot in not_predicted:
             file.write(str(annot) + '\n')
     return correct / (correct + incorrect)
@@ -36,7 +36,7 @@ def precision(gold_annotations, predicted_annotations, relation_types):
                 else:
                     incorrect += 1
                     in_accurate.append((sent_id, predicted_rel))
-    with open('didnt make it to precision list', 'w') as file:
+    with open('didnt make it to precision list5', 'w') as file:
         for annot in in_accurate:
             file.write(str(annot) + '\n')
     return correct / (correct + incorrect)

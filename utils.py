@@ -124,13 +124,18 @@ def get_entity_vecs(nlp, sentence):
     entities = []
     ent_ids = []
     ners = []
-    parsed = nlp(' '.join(sentence[SENTENCE])).tensor
+    nlp_sent = nlp(' '.join(sentence[SENTENCE]))
+    parsed = nlp_sent.tensor
     curr_sentence = sentence[ENTITIES]
     for ent_id, (ent, iob, word) in curr_sentence.items():
         if iob == 'B':
             if ent_id > 0 and sentence[SENTENCE][ent_id - 1] in ['Mrs.', 'Mr.', 'Ms.']:
                 word = sentence[SENTENCE][ent_id - 1] + ' ' + word
+            if word == 'Soviet':
+                ent = 'GPE'
             ners.append(ent)
+            # head_id = nlp_sent[ent_id].head.vector
+            # ent_vec = parsed[ent_id] + head_id
             ent_vec = parsed[ent_id]
             sent_vecs.append(ent_vec)
             entities.append(word)
@@ -138,6 +143,12 @@ def get_entity_vecs(nlp, sentence):
         if iob != 'B':
             sent_vecs[-1] += parsed[ent_id]
             entities[-1] += ' ' + word
+            if sentence[SENTENCE][ent_id - 1] == '-':
+                entities[-1] = '-'.join(entities[-1].split(' - '))
+            if entities[-1][:4] == 'the ':
+                entities[-1] = entities[-1][4:]
+            if entities[-1].split('\'')[-1] == 's':
+                entities[-1] = ''.join(entities[-1].split('\'')[:-1])
     return sent_vecs, ners, entities, ent_ids
 
 
@@ -171,8 +182,11 @@ def tag_possible_relations(gold_relations, possible_relations, bad_examples=0.3)
     train_tags = []
     for sent_id, relations_dict in possible_relations.items():
         for rel_type, entity_list in relations_dict.items():
-            for (ent1, ent2) in entity_list:
+            if rel_type == 'Live_In':
+                r = 0
+            else:
                 r = random.randint(0, 9) / 10.0
+            for (ent1, ent2) in entity_list:
                 if any([ent1[1], ent2[1]] == relation for relation in gold_relations[sent_id][rel_type]):
                     train_set.append(np.concatenate([ent1[0], ent2[0]]))
                     train_tags.append(1)

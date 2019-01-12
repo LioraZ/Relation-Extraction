@@ -38,7 +38,13 @@ def predict_dev(svm, processed_data):
 
 def has_relation(annotation, processed_data):
     sent_id, ent1, rel_type, ent2 = annotation
-    if sent_id == 'sent1838':
+    # ('sent1695', ['Wang Shaohua', 'San Francisco'])
+    # ('sent1702', ['Hua Wen-Yi', 'Shanghai'])
+    # ('sent1818', ['David Leahy', 'Dade County'])
+    # ('sent1828', ['John Stembridge.', 'North Miami'])
+    # soviet, the united states, south korea's -no appostarphe
+    # not taking care if org has name of GPE
+    if sent_id == 'sent1695':
         print('yay')
         sent_tokens = processed_data[sent_id][utils.SENTENCE]
         loc_kw = ['from', 'in']
@@ -53,25 +59,31 @@ def has_relation(annotation, processed_data):
         # Marie Magdefrau Ferraro , 50 , of Bethany, Conn, David, of the.... in Ohio, David Leahy , elections supervisor for Dade County,
         # said Robert Isaacks , an emergency medical technician on High Island,
         sent_tokens = processed_data[sent_id][utils.SENTENCE]
-        loc_kw = ['from', 'in']
+        loc_kw = ['from', 'in', 'of']
         nltk_parse = nltk.ChartParser(np_grammar)
 
         doc = nlp(' '.join(sent_tokens))
-        for w in doc:
+        """for w in doc:
             if w.dep_ == 'ROOT':
                 print_dep_tree(w)
                 break
+                """
+        pos_list = ['VERB', 'ADP', 'PROPN']
         #print(nltk_parse.parse([(w.text, w.tag_) for w in doc]))
         root1 = root2 = None
         for chunk in doc.noun_chunks:
             if ent1 in chunk.text and ent2 in chunk.text:
                 return True
-            if ent1 in chunk.text and chunk.root.head.text == 'is':
-                root1 = chunk.root.head.text
+            if ent1 in chunk.text:
+                # print(chunk.root.head.pos)
+                root1 = chunk.root.head.pos_
             if ent2 in chunk.text and chunk.root.head.text in loc_kw:
                 root2 = chunk.root.head.text
             print(chunk.text, chunk.root.text, chunk.root.dep_, chunk.root.head.text)
-        if root1 is not None and root2 is not None:
+        """if root2 == 'of':
+            return True"""
+        if root1 in pos_list and root2 in loc_kw:
+            return True
             if root1 == 'is' and root2 in loc_kw:
                 return True
         print(sent_tokens)

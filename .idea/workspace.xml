@@ -4,10 +4,6 @@
     <list default="true" id="f2002651-b834-4252-b1ae-5a64d01e51e9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model_file" afterPath="$PROJECT_DIR$/model_file" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/all 'Live_In' relations" afterPath="$PROJECT_DIR$/all 'Live_In' relations" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/analyze_annotations.py" afterPath="$PROJECT_DIR$/analyze_annotations.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/didnt make it to precision list" afterPath="$PROJECT_DIR$/didnt make it to precision list" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/didnt make it to recall list" afterPath="$PROJECT_DIR$/didnt make it to recall list" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eval.py" afterPath="$PROJECT_DIR$/eval.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/extract.py" afterPath="$PROJECT_DIR$/extract.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/predicted_annotations" afterPath="$PROJECT_DIR$/predicted_annotations" />
@@ -29,8 +25,8 @@
       <file leaf-file-name="eval.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/eval.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="8" column="22" lean-forward="true" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+            <state relative-caret-position="506">
+              <caret line="38" column="47" lean-forward="false" selection-start-line="38" selection-start-column="47" selection-end-line="38" selection-end-column="47" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -38,11 +34,51 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="didnt make it to recall list5" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/didnt make it to recall list5">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="19" column="39" lean-forward="false" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="didnt make it to recall list4" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/didnt make it to recall list4">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="682">
+              <caret line="31" column="49" lean-forward="true" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="predicted_annotations" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/predicted_annotations">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-132">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="dev.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Annotations/dev.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4312">
-              <caret line="196" column="35" lean-forward="false" selection-start-line="196" selection-start-column="28" selection-end-line="196" selection-end-column="35" />
+            <state relative-caret-position="247">
+              <caret line="155" column="32" lean-forward="false" selection-start-line="155" selection-start-column="32" selection-end-line="155" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="didnt make it to recall list2" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/didnt make it to recall list2">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="14" column="46" lean-forward="false" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -51,29 +87,22 @@
       <file leaf-file-name="dev.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Proccessed/dev.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="4764" column="54" lean-forward="false" selection-start-line="4764" selection-start-column="54" selection-end-line="4764" selection-end-column="54" />
+            <state relative-caret-position="225">
+              <caret line="9778" column="44" lean-forward="true" selection-start-line="9778" selection-start-column="44" selection-end-line="9778" selection-end-column="44" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="all 'Live_In' relations" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/all 'Live_In' relations">
+      <file leaf-file-name="extract.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/extract.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="530">
-              <caret line="253" column="0" lean-forward="false" selection-start-line="253" selection-start-column="0" selection-end-line="253" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="analyze_annotations.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/analyze_annotations.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="10" column="37" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="440">
+              <caret line="82" column="24" lean-forward="false" selection-start-line="82" selection-start-column="24" selection-end-line="82" selection-end-column="24" />
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
+                <element signature="e#455#648#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -81,10 +110,12 @@
       <file leaf-file-name="utils.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="737">
-              <caret line="188" column="16" lean-forward="true" selection-start-line="188" selection-start-column="16" selection-end-line="188" selection-end-column="16" />
+            <state relative-caret-position="332">
+              <caret line="148" column="47" lean-forward="true" selection-start-line="148" selection-start-column="47" selection-end-line="148" selection-end-column="47" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
+                <element signature="e#1117#2418#0" expanded="false" />
+                <element signature="e#2465#3484#0" expanded="false" />
                 <element signature="e#4282#4353#0" expanded="false" />
               </folding>
             </state>
@@ -94,45 +125,12 @@
       <file leaf-file-name="re_svm.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/re_svm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="64" column="50" lean-forward="false" selection-start-line="64" selection-start-column="50" selection-end-line="64" selection-end-column="50" />
+            <state relative-caret-position="12">
+              <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
               <folding>
                 <element signature="e#150#231#0" expanded="false" />
                 <element signature="e#257#1296#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="train.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Corpus/train.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="166" lean-forward="true" selection-start-line="0" selection-start-column="166" selection-end-line="0" selection-end-column="166" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="extract.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/extract.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="47" column="10" lean-forward="false" selection-start-line="47" selection-start-column="10" selection-end-line="47" selection-end-column="10" />
-              <folding>
-                <element signature="e#0#12#0" expanded="true" />
-                <element signature="e#455#648#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="didnt make it to recall list" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/didnt make it to recall list">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="4" column="39" lean-forward="false" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -148,36 +146,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>1714</find>
-      <find>1787</find>
-      <find>1814</find>
-      <find>1818</find>
-      <find>1828</find>
-      <find>1861</find>
-      <find>1866</find>
-      <find>1893</find>
-      <find>1908</find>
-      <find>1911</find>
-      <find>1946</find>
-      <find>2045</find>
-      <find>Work_For</find>
-      <find>sent1656</find>
-      <find>1656</find>
-      <find>2988</find>
-      <find>Live_In</find>
-      <find>sent2988</find>
-      <find>2424</find>
-      <find>sent2423</find>
-      <find>sent1838</find>
-      <find>sent2817</find>
-      <find>Ms.</find>
-      <find>sent72</find>
-      <find>Mrs.</find>
       <find>sent2987</find>
-      <find>1838</find>
       <find>2987</find>
       <find>1901</find>
       <find>sent1901</find>
+      <find>1818</find>
+      <find>1828</find>
+      <find>1838</find>
+      <find>1861</find>
+      <find>1893</find>
+      <find>1673</find>
+      <find>1674</find>
+      <find>1695</find>
+      <find>2255</find>
+      <find>2223</find>
+      <find>NORP</find>
+      <find>2887</find>
+      <find>2539</find>
+      <find>the</find>
+      <find>2465</find>
+      <find>South</find>
+      <find>2906</find>
+      <find>shau</find>
+      <find>-</find>
+      <find>1702</find>
+      <find>1946</find>
+      <find>2194</find>
+      <find>2424</find>
+      <find>2436</find>
+      <find>2929</find>
+      <find>3152</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -194,12 +192,13 @@
         <option value="$PROJECT_DIR$/extract_file.py" />
         <option value="$PROJECT_DIR$/try_tomer.py" />
         <option value="$PROJECT_DIR$/Annotations/dev.txt" />
-        <option value="$PROJECT_DIR$/predicted_annotations" />
         <option value="$PROJECT_DIR$/analyze_annotations.py" />
-        <option value="$PROJECT_DIR$/eval.py" />
-        <option value="$PROJECT_DIR$/utils.py" />
         <option value="$PROJECT_DIR$/re_svm.py" />
+        <option value="$PROJECT_DIR$/didnt make it to recall list3" />
+        <option value="$PROJECT_DIR$/eval.py" />
+        <option value="$PROJECT_DIR$/predicted_annotations" />
         <option value="$PROJECT_DIR$/extract.py" />
+        <option value="$PROJECT_DIR$/utils.py" />
       </list>
     </option>
   </component>
@@ -285,7 +284,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../AI/Ex2" />
   </component>
   <component name="RunManager" selected="Python.eval">
     <configuration default="false" name="try" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -576,9 +575,9 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32887402" sideWeight="0.5021075" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27201784" sideWeight="0.49578503" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32887402" sideWeight="0.49789253" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32887402" sideWeight="0.49789253" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33333334" sideWeight="0.49578503" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33333334" sideWeight="0.49578503" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36677814" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -602,19 +601,14 @@
           <option name="timeStamp" value="52" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/extract.py</url>
-          <line>64</line>
-          <option name="timeStamp" value="112" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/extract.py</url>
-          <line>76</line>
-          <option name="timeStamp" value="113" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/utils.py</url>
-          <line>186</line>
+          <line>200</line>
           <option name="timeStamp" value="134" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/extract.py</url>
+          <line>78</line>
+          <option name="timeStamp" value="143" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -624,53 +618,11 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="137" />
+      <option name="time" value="144" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/eval.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Annotations/dev.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4312">
-          <caret line="196" column="35" lean-forward="false" selection-start-line="196" selection-start-column="28" selection-end-line="196" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Proccessed/dev.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105006">
-          <caret line="4773" column="48" lean-forward="false" selection-start-line="4773" selection-start-column="0" selection-end-line="4773" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/predicted_annotations">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20812">
-          <caret line="946" column="0" lean-forward="false" selection-start-line="946" selection-start-column="0" selection-end-line="946" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/didnt make it to precision list">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5566">
-          <caret line="253" column="0" lean-forward="false" selection-start-line="253" selection-start-column="0" selection-end-line="253" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/didnt make it to recall list">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
@@ -701,6 +653,8 @@
           <caret line="109" column="32" lean-forward="true" selection-start-line="109" selection-start-column="32" selection-end-line="109" selection-end-column="32" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
+            <element signature="e#1117#2418#0" expanded="false" />
+            <element signature="e#2465#3484#0" expanded="false" />
             <element signature="e#4282#4353#0" expanded="false" />
           </folding>
         </state>
@@ -795,6 +749,8 @@
           <caret line="55" column="38" lean-forward="true" selection-start-line="55" selection-start-column="38" selection-end-line="55" selection-end-column="38" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
+            <element signature="e#1117#2418#0" expanded="false" />
+            <element signature="e#2465#3484#0" expanded="false" />
             <element signature="e#4282#4353#0" expanded="false" />
           </folding>
         </state>
@@ -811,6 +767,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -818,6 +775,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2024">
           <caret line="118" column="0" lean-forward="false" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -825,6 +783,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -860,6 +819,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
           <caret line="106" column="0" lean-forward="false" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -942,60 +902,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/predicted_annotations">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20812">
-          <caret line="946" column="0" lean-forward="false" selection-start-line="946" selection-start-column="0" selection-end-line="946" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/didnt make it to precision list">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5566">
-          <caret line="253" column="0" lean-forward="false" selection-start-line="253" selection-start-column="0" selection-end-line="253" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Annotations/dev.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4312">
-          <caret line="196" column="35" lean-forward="false" selection-start-line="196" selection-start-column="28" selection-end-line="196" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Corpus/train.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="166" lean-forward="true" selection-start-line="0" selection-start-column="166" selection-end-line="0" selection-end-column="166" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Proccessed/dev.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="4764" column="54" lean-forward="false" selection-start-line="4764" selection-start-column="54" selection-end-line="4764" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/eval.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="22" lean-forward="true" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/all 'Live_In' relations">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="530">
-          <caret line="253" column="0" lean-forward="false" selection-start-line="253" selection-start-column="0" selection-end-line="253" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1008,18 +918,82 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/all 'Live_In' relations">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="530">
+          <caret line="253" column="0" lean-forward="false" selection-start-line="253" selection-start-column="0" selection-end-line="253" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/didnt make it to precision list">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="28" column="36" lean-forward="true" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/didnt make it to recall list">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="39" lean-forward="false" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
+        <state relative-caret-position="110">
+          <caret line="5" column="23" lean-forward="true" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/didnt make it to precision list2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="94" column="43" lean-forward="true" selection-start-line="94" selection-start-column="43" selection-end-line="94" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Annotations/dev.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="155" column="32" lean-forward="false" selection-start-line="155" selection-start-column="32" selection-end-line="155" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/didnt make it to precision list4">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="39" lean-forward="true" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/didnt make it to recall list3">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="21" lean-forward="true" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/didnt make it to recall list4">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="682">
+          <caret line="31" column="49" lean-forward="true" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/didnt make it to recall list5">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="19" column="39" lean-forward="false" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/re_svm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="64" column="50" lean-forward="false" selection-start-line="64" selection-start-column="50" selection-end-line="64" selection-end-column="50" />
+        <state relative-caret-position="12">
+          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
           <folding>
             <element signature="e#150#231#0" expanded="false" />
             <element signature="e#257#1296#0" expanded="false" />
@@ -1027,10 +1001,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/didnt make it to recall list2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="46" lean-forward="false" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/predicted_annotations">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-132">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eval.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="38" column="47" lean-forward="false" selection-start-line="38" selection-start-column="47" selection-end-line="38" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Proccessed/dev.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9778" column="44" lean-forward="true" selection-start-line="9778" selection-start-column="44" selection-end-line="9778" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/extract.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="47" column="10" lean-forward="false" selection-start-line="47" selection-start-column="10" selection-end-line="47" selection-end-column="10" />
+        <state relative-caret-position="440">
+          <caret line="82" column="24" lean-forward="false" selection-start-line="82" selection-start-column="24" selection-end-line="82" selection-end-column="24" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
             <element signature="e#455#648#0" expanded="false" />
@@ -1040,10 +1048,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="737">
-          <caret line="188" column="16" lean-forward="true" selection-start-line="188" selection-start-column="16" selection-end-line="188" selection-end-column="16" />
+        <state relative-caret-position="332">
+          <caret line="148" column="47" lean-forward="true" selection-start-line="148" selection-start-column="47" selection-end-line="148" selection-end-column="47" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
+            <element signature="e#1117#2418#0" expanded="false" />
+            <element signature="e#2465#3484#0" expanded="false" />
             <element signature="e#4282#4353#0" expanded="false" />
           </folding>
         </state>
